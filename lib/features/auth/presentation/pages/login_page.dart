@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:lottie/lottie.dart';
-import 'package:ZenonApp/core/routes/app_routes.dart';
+import 'package:zenon_app/core/routes/app_routes.dart';
 import '../login_controller.dart';
 
 class LoginPage extends StatelessWidget {

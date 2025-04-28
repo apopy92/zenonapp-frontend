@@ -1,7 +1,7 @@
 plugins {
-    id "com.android.application"
-    id "kotlin-android"
-    id "dev.flutter.flutter-gradle-plugin"
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'dev.flutter.flutter-gradle-plugin'
 }
 
 def localProperties = new Properties()
@@ -13,12 +13,28 @@ if (localPropertiesFile.exists()) {
 }
 
 def flutterVersionCode = localProperties.getProperty('flutter.versionCode') ?: '1'
-def flutterVersionName = localProperties.getProperty('flutter.versionName') ?: '1.0'
+def flutterVersionName = localProperties.getProperty('flutter.versionName') ?: '1.0.0'
 
 android {
-    namespace "com.zenonapp.mobile"
-    compileSdk flutter.compileSdkVersion
-    ndkVersion flutter.ndkVersion
+    namespace 'com.zenonapp.mobile'
+    compileSdkVersion 35 // Usualmente se utiliza la última versión soportada por Flutter
+
+    defaultConfig {
+        applicationId "com.zenonapp.mobile"
+        minSdkVersion 21 // Asegúrate de que esto esté en línea con lo que soporta tu app
+        targetSdkVersion 35 // Asegúrate de usar una versión compatible con Flutter
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true // Habilitar la optimización del código para producción
+            shrinkResources true // Eliminar recursos no utilizados
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug // Asegúrate de configurar correctamente la firma para producción
+        }
+    }
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -26,30 +42,21 @@ android {
     }
 
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = '1.8' // Mantén esto igual, Flutter generalmente usa Java 8
     }
 
+    // Asegúrate de que las dependencias de Kotlin y Flutter estén bien configuradas
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
-    defaultConfig {
-        applicationId "com.zenonapp.mobile"
-        minSdkVersion flutter.minSdkVersion
-        targetSdkVersion flutter.targetSdkVersion
-        versionCode flutterVersionCode.toInteger()
-        versionName flutterVersionName
-    }
-
-    buildTypes {
-        release {
-            signingConfig signingConfigs.debug // ⚠️ Solo para pruebas locales
-        }
-    }
+    ndkVersion flutter.ndkVersion // Esto lo puedes dejar como está si estás usando NDK
 }
 
 flutter {
-    source '../..'
+    source '../..' // Esto está bien si estás usando Flutter en el directorio principal
 }
 
-dependencies {}
+dependencies {
+    // Agrega dependencias de tu proyecto aquí si las tienes
+}

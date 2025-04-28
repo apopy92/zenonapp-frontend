@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ZenonApp/features/galpon/data/galpon_service.dart';
-import 'package:ZenonApp/features/galpon/domain/galpon_model.dart';
-import 'package:ZenonApp/features/auth/data/token_provider.dart';
+import 'package:zenon_app/features/galpon/data/galpon_service.dart';
+import 'package:zenon_app/features/galpon/domain/galpon_model.dart';
+import 'package:zenon_app/features/auth/data/token_provider.dart';
 
 class GalponController with ChangeNotifier {
   final GalponService _galponService;

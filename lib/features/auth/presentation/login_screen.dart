@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'login_controller.dart';
-import 'package:ZenonApp/features/auth/presentation/pages/splash_loading_screen.dart';
+import 'package:zenon_app/features/auth/presentation/pages/splash_loading_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:ZenonApp/constants.dart';
-import 'package:ZenonApp/features/auth/data/auth_service.dart';
-import 'package:ZenonApp/features/auth/data/token_provider.dart';
+import 'package:zenon_app/constants.dart';
+import 'package:zenon_app/features/auth/data/auth_service.dart';
+import 'package:zenon_app/features/auth/data/token_provider.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

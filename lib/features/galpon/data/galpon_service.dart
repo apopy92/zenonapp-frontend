@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:ZenonApp/constants.dart';
-import 'package:ZenonApp/features/galpon/domain/galpon_model.dart';
-import 'package:ZenonApp/features/auth/data/token_provider.dart';
+import 'package:zenon_app/constants.dart';
+import 'package:zenon_app/features/galpon/domain/galpon_model.dart';
+import 'package:zenon_app/features/auth/data/token_provider.dart';
 
 class GalponService {
   final TokenProvider tokenProvider;

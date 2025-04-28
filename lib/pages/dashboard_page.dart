@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:ZenonApp/core/routes/app_routes.dart';
-import 'package:ZenonApp/features/galpon/presentation/galpon_controller.dart';
-import 'package:ZenonApp/features/auth/presentation/login_controller.dart';
-import 'package:ZenonApp/features/auth/presentation/widgets/splash_dialog_loading.dart';
+import 'package:zenon_app/core/routes/app_routes.dart';
+import 'package:zenon_app/features/galpon/presentation/galpon_controller.dart';
+import 'package:zenon_app/features/auth/presentation/login_controller.dart';
+import 'package:zenon_app/features/auth/presentation/widgets/splash_dialog_loading.dart';
 import '../../widgets/info_card.dart';
 import '../../widgets/pie_chart.dart';
 

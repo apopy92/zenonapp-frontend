@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ZenonApp/features/auth/presentation/pages/login_page.dart';
-import 'package:ZenonApp/features/auth/presentation/pages/login_success_screen.dart'; // ✅ nuevo import
-import 'package:ZenonApp/pages/dashboard_page.dart';
-import 'package:ZenonApp/pages/gasto_page.dart';
-import 'package:ZenonApp/pages/mortandad_page.dart';
-import 'package:ZenonApp/pages/produccion_page.dart';
+import 'package:zenon_app/features/auth/presentation/pages/login_page.dart';
+import 'package:zenon_app/features/auth/presentation/pages/login_success_screen.dart'; // ✅ nuevo import
+import 'package:zenon_app/pages/dashboard_page.dart';
+import 'package:zenon_app/pages/gasto_page.dart';
+import 'package:zenon_app/pages/mortandad_page.dart';
+import 'package:zenon_app/pages/produccion_page.dart';
 
 class AppRoutes {
   static const String login = '/login';

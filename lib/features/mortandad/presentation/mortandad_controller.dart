@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:ZenonApp/constants.dart';
-import 'package:ZenonApp/features/galpon/presentation/galpon_controller.dart';
-import 'package:ZenonApp/features/auth/data/token_provider.dart';
+import 'package:zenon_app/constants.dart';
+import 'package:zenon_app/features/galpon/presentation/galpon_controller.dart';
+import 'package:zenon_app/features/auth/data/token_provider.dart';
 
 class MortandadController with ChangeNotifier {
   final GalponController galponController;
